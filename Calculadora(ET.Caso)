@@ -1,0 +1,66 @@
+programa
+{
+	funcao inicio()
+	{
+	//Variaveis 
+        inteiro operacao
+        real valor1, valor2
+        
+     escreva ("Selecione a operação a ser realizada: ", "\n")
+     escreva ("-------------------", "\n")
+     escreva ("| [1]Soma         |", "\n")
+     escreva ("| [2]Subtração    |", "\n")
+     escreva ("| [3]Multiplicação|", "\n")
+     escreva ("| [4]Divisão      |", "\n")
+     escreva ("-------------------", "\n")
+     	leia (operacao)
+
+     enquanto (operacao != 1 e operacao !=2 e operacao !=3 e operacao !=4)
+     {
+     	limpa()
+     	escreva ("Opção invalida,selecione uma das operações abaixo:", "\n")
+     	escreva ("-------------------", "\n")
+     	escreva ("| [1]Soma         |", "\n")
+     	escreva ("| [2]Subtração    |", "\n")
+     	escreva ("| [3]Multiplicação|", "\n")
+     	escreva ("| [4]Divisão      |", "\n")
+     	escreva ("-------------------", "\n")
+     	 leia (operacao)
+     }
+
+	escolha (operacao)
+	{
+	   caso 1:
+            escreva ("Informe um número: ", "\n")
+            leia(valor1)
+            escreva ("+", "\n")
+            leia(valor2)
+            escreva(valor1, " + ", valor2, " = ", valor1 + valor2)
+          pare
+           
+   	   caso 2:
+            escreva ("Informe um número: ", "\n")
+            leia(valor1)
+            escreva("-", "\n")
+            leia(valor2)
+            escreva(valor1, " - ", valor2, " = ", valor1 - valor2)
+          pare
+           
+        caso 3:
+            escreva ("Informe um número: ", "\n")
+            leia(valor1)
+            escreva("x", "\n")
+            leia(valor2)
+            escreva(valor1, " x ", valor2, " = ", valor1 * valor2)
+           pare
+            
+   	   caso 4:
+            escreva ("Informe um número: ", "\n")
+            leia(valor1)
+            escreva("÷", "\n")
+            leia(valor2)
+            escreva(valor1, " ÷ ", valor2 , " = ", valor1 / valor2)
+        	 pare
+	}	
+	}
+}
