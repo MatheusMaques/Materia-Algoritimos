@@ -1,0 +1,419 @@
+programa
+{
+	
+//1-Faça um algoritmo que receba um número e mostre uma mensagem caso este número seja maior que 10. 
+
+	funcao inicio()
+	{
+		//variaveis
+		inteiro x = 0
+ 
+		escreva (("Digite um número: "), "\n")
+			leia(x)
+
+		//verificação do valor do número informado
+		se (x >= 10){
+			escreva ("Este número é maior que 10")
+		}
+		senao {
+			escreva ("Este número é menor que 10")
+		}
+		
+		
+	}
+}
+=================================================================================================================================================================================
+
+programa
+{
+	
+//2-Escrever um algoritmo que leia dois valores inteiro distintos e informe qual é o maior.
+	funcao inicio()
+	{
+		//variaves
+		inteiro x, y
+
+		escreva (("Digite um valor: "), "\n")
+			leia (x)
+		escreva (("Digite um segundo valor: "), "\n")
+			leia (y)
+
+		//validação do maior valor
+		se (x > y){
+			escreva ("O valor ", x, " é maior que ", y) 
+		}
+		
+		senao {
+			escreva ("O valor ", y, " é maior que ", x)
+		}
+		
+	}
+}
+
+=================================================================================================================================================================================
+
+programa
+{
+	
+//3-Faça um algoritmo que receba um número e diga se este número está no intervalo entre 100 e 200.
+	funcao inicio()
+	{
+		//variaveis
+		inteiro x
+
+		escreva ("Digite um valor: ", "\n")
+			leia (x)
+
+		se (x >=100 e x <= 200)
+			escreva ("O valor de X está entre 100 e 200, sendo ", x)
+		senao 
+			escreva ("O valor de X não está entre 100 e 200")
+	}
+}
+
+=================================================================================================================================================================================
+
+programa
+{
+	//4-Escrever um algoritmo que leia o nome e as três notas obtidas por um aluno durante o semestre. Calcular a sua média (aritmética), informar o nome e sua menção aprovado (media >= 7), Reprovado (media <= 5) e Recuperação (media entre 5.1 a 6.9). 
+	inclua biblioteca Matematica
+	funcao inicio()
+	{
+		//variaveis
+		cadeia aluno
+		real n1, n2, n3, media
+
+		escreva ("Digite o nome do aluno: ", "\n")
+			leia (aluno)
+		escreva ("Informe a primeira nota: ", "\n")
+			leia (n1)
+		escreva ("Iforme a segunda nota: ", "\n")
+			leia (n2)
+		escreva ("Informe a terceira nota: ", "\n")
+			leia (n3)
+
+		media = (n1 + n2 + n3) / 3
+		media =Matematica.arredondar(media,2)
+
+		se (media >= 7)
+			escreva ("O aluno ", aluno, " está APROVADO,com média ", media)
+		senao se (media <= 5)
+			escreva ("O aluno ", aluno, " está REPROVADO,com média ", media)
+		senao se (media >= 5.1 e media <= 6.9)
+			escreva ("O aluno ", aluno, " está de RECUPERAÇÃO,com média ", media)
+	}
+}
+
+=================================================================================================================================================================================
+
+programa
+{
+	
+//5-Ler 80 números e ao final informar quantos número(s) est(á)ão no intervalo entre 10 (inclusive) e 150 (inclusive). 
+	funcao inicio()
+	{
+		//variaveis
+		inteiro inicial, x
+		inteiro result = 0
+		
+	 	para (inicial = 1; inicial < 80; inicial ++){
+			escreva ("Digite um valor: ", "\n")
+				leia (x)
+						
+		 	se (x >= 10 e x <= 150){
+		 	result = result + 1
+		 	}
+		}
+		escreva ("Existem ", result," números entre o intervalo de 10 e 150") 
+	}
+}
+
+=================================================================================================================================================================================
+
+programa
+{
+	
+//6-Faça um algoritmo que leia dois números e identifique se são iguais ou diferentes. Caso eles sejam iguais imprima uma mensagem dizendo que eles são iguais. Caso sejam diferentes, informe qual número é o maior, e uma mensagem que são diferentes. 
+	funcao inicio()
+	{
+	//variaveis
+	inteiro n1, n2
+
+		escreva ("Informe um número: ", "\n")
+			leia (n1)
+		escreva ("Informe um segundo número: ", "\n")
+			leia(n2)
+		 	
+		 se (n1 == n2){
+		 	escreva ("Os número informado são iguais")
+		 }
+		 senao se (n1 != n2 e n1 < n2){
+		 	escreva ("Os números informado são diferentes, e o maior é ", n2)
+		 }
+		 senao se (n1 != n2 e n1 > n2){
+		 	escreva ("Os números informado são diferentes, e o maior é ", n1)
+		 }
+		}
+}
+
+=================================================================================================================================================================================
+
+programa
+{
+	//7-Faça um algoritmo que leia um número de 1 a 5 e escreva por extenso. Caso o usuário digite um número que não esteja neste intervalo, exibir mensagem: número inválido.	
+	funcao inicio()
+	{
+		//variaveis
+		inteiro x
+
+		escreva ("Informe um número de 1 a 5 ", "\n")
+			leia(x)
+			
+		enquanto (x > 5){
+			escreva ("Erro, informe um número válido:", "\n")
+			 	leia (x)
+			 	}
+		
+		escolha (x){
+			caso 1:
+			escreva ("O número informado foi o número um")
+			pare
+			
+			caso 2:
+			escreva ("O número informado foi o número dois")
+			pare
+			
+			caso 3:
+			escreva ("O número informado foi o número três")
+			pare
+			
+			caso 4:
+			escreva ("O número informado foi o número quatro")
+			pare
+			
+			caso 5:
+			escreva ("O número informado foi o número cinco")
+			pare
+		}
+	}
+}
+
+=================================================================================================================================================================================
+
+programa
+{
+	
+//8- Faça um algoritmo que receba o número do mês e mostre o mês correspondente. Valide mês inválido. 
+	funcao inicio()
+	{
+		//variaveis
+		inteiro nmes
+		
+		escreva ("Informe o número do mês que estamos: ", "\n")
+			leia(nmes)
+			
+		enquanto (nmes > 12){
+			escreva ("Erro, informe um número válido:", "\n")
+			 	leia (nmes)
+			 	}
+		
+		escolha (nmes){
+			caso 1:
+			escreva ("Estamos no mês de Janeiro")
+			pare
+			
+			caso 2:
+			escreva ("Estamos no mês de Fevereiro")
+			pare
+			
+			caso 3:
+			escreva ("Estamos no mês de Março")
+			pare
+			
+			caso 4:
+			escreva ("Estamos no mês de Abril")
+			pare
+			
+			caso 5:
+			escreva ("Estamos no mês de Maio")
+			pare
+
+			caso 6:
+			escreva ("Estamos no mês de Junho")
+			pare
+
+			caso 7:
+			escreva ("Estamos no mês de Julho")
+			pare
+
+			caso 8:
+			escreva ("Estamos no mês de Agosto")
+			pare
+
+			caso 9:
+			escreva("Estamos no mês de Setembro")
+			pare
+
+			caso 10:
+			escreva ("Estamos no mês de Outubro")
+			pare
+
+			caso 11:
+			escreva ("Estamos no mês de Novembro")
+			pare
+
+			caso 12:
+			escreva ("Estamos no mês de Dezembro")
+			pare
+		}
+	}
+}
+
+=================================================================================================================================================================================
+
+programa
+{
+	//9- Faça um algoritmo que receba o nome a idade, o sexo e salário fixo de um funcionário. Mostre o nome e o salário líquido: 
+	funcao inicio()
+	{
+	//variaveis
+	cadeia nome
+	inteiro idade
+	caracter sexo
+	real sbruto, sliquido, inss, irrf, sli 
+
+		escreva ("         FICHA CADASTRAL FUNCIONARIOS     ", "\n")
+		escreva ("Nome: ", "\n")
+			leia (nome)
+		escreva ("Idade: ", "\n")
+			leia (idade)
+		escreva ("Sexo: ", "\n")
+			leia (sexo)
+		escreva ("Salário Bruto: ", "\n")
+			leia(sbruto)
+
+		//Calculo do inss até R$1302,isento de imposto de renda
+		se (sbruto <= 1302){
+			inss = (sbruto * 7.5) / 100
+			sliquido = sbruto - inss
+				
+		escreva ("          INFORMAÇÕES FUNCIONÁRIOS       ", "\n")
+		escreva ("Nome: ", nome, "\n")
+		escreva ("Idade: ", idade, "\n")
+		escreva ("Sexo: ", sexo, "\n")
+		escreva ("Salário líquido: ", sliquido)
+		}
+////////////////////////////////////////////////////////////////////////////////////////////
+		//Calculo do inss de R$1303 a R$2571
+		se (sbruto >= 1303 e sbruto <= 2571){
+			inss = (sbruto * 9) / 100
+			sliquido = sbruto - inss
+
+			//Calculo do imposto de renda de R$1904 a R$2827
+			se (sbruto >= 1904 e sbruto <= 2827){
+				irrf = (sbruto * 7.5) / 100
+				sliquido = sbruto - inss - irrf	
+			}
+
+			//calculo do imposto de renda de R$2.828 a R$3.751
+			se (sbruto >= 2828 e sbruto <= 3751){
+				irrf = (sbruto * 15) / 100
+				sliquido = sbruto - inss - irrf	
+			}
+
+			//calculo do imposto de renda de R$3.752 a R$4.665
+			se (sbruto >= 3752 e sbruto <= 4665){
+				irrf = (sbruto * 22.5) / 100
+				sliquido = sbruto - inss - irrf	
+			}
+
+			
+			//calculo do imposto de renda de R$4666 para cima 
+			se (sbruto >= 4666){
+				irrf = (sbruto * 27.5) / 100
+				sliquido = sbruto - inss - irrf	
+			}
+			
+		escreva ("          INFORMAÇÕES FUNCIONÁRIOS       ", "\n")
+		escreva ("Nome: ", nome, "\n")
+		escreva ("Idade: ", idade, "\n")
+		escreva ("Sexo: ", sexo, "\n")
+		escreva ("Salário líquido: ", sliquido)
+		}
+////////////////////////////////////////////////////////////////////////////////////////////
+		//calculo do inss de R$2752 à R$3857
+		se (sbruto >= 2572 e sbruto <= 3857){
+			inss = (sbruto * 12) / 100
+			sliquido = sbruto - inss
+
+			//Calculo do imposto de renda de R$1904 a R$2827
+			se (sbruto >= 1904 e sbruto <= 2827){
+				irrf = (sbruto * 7.5) / 100
+				sliquido = sbruto - inss - irrf	
+			}
+
+			//calculo do imposto de renda de R$2.828 a R$3.751
+			se (sbruto >= 2828 e sbruto <= 3751){
+				irrf = (sbruto * 15) / 100
+				sliquido = sbruto - inss - irrf	
+			}
+
+			//calculo do imposto de renda de R$3.752 a R$4.665
+			se (sbruto >= 3752 e sbruto <= 4665){
+				irrf = (sbruto * 22.5) / 100
+				sliquido = sbruto - inss - irrf	
+			}
+
+			
+			//calculo do imposto de renda de R$4666 para cima 
+			se (sbruto >= 4666){
+				irrf = (sbruto * 27.5) / 100
+				sliquido = sbruto - inss - irrf	
+			}
+			
+		escreva ("          INFORMAÇÕES FUNCIONÁRIOS       ", "\n")
+		escreva ("Nome: ", nome, "\n")
+		escreva ("Idade: ", idade, "\n")
+		escreva ("Sexo: ", sexo, "\n")
+		escreva ("Salário líquido: ", sliquido)
+		}
+////////////////////////////////////////////////////////////////////////////////////////////
+		//calculo do inss de R$3.858 à 7.508
+		se (sbruto >= 3858 e sbruto <= 7508){
+			inss = (sbruto * 14) / 100
+			sliquido = sbruto - inss
+
+			//Calculo do imposto de renda de R$1904 a R$2827
+			se (sbruto >= 1904 e sbruto <= 2827){
+				irrf = (sbruto * 7.5) / 100
+				sliquido = sbruto - inss - irrf	
+			}
+
+			//calculo do imposto de renda de R$2.828 a R$3.751
+			se (sbruto >= 2828 e sbruto <= 3751){
+				irrf = (sbruto * 15) / 100
+				sliquido = sbruto - inss - irrf	
+			}
+
+			//calculo do imposto de renda de R$3.752 a R$4.665
+			se (sbruto >= 3752 e sbruto <= 4665){
+				irrf = (sbruto * 22.5) / 100
+				sliquido = sbruto - inss - irrf	
+			}
+
+			
+			//calculo do imposto de renda de R$4666 para cima 
+			se (sbruto >= 4666){
+				irrf = (sbruto * 27.5) / 100
+				sliquido = sbruto - inss - irrf	
+			}
+			
+		escreva ("          INFORMAÇÕES FUNCIONÁRIOS       ", "\n")
+		escreva ("Nome: ", nome, "\n")
+		escreva ("Idade: ", idade, "\n")
+		escreva ("Sexo: ", sexo, "\n")
+		escreva ("Salário líquido: ", sliquido)
+		}
+		
+	}
+}
